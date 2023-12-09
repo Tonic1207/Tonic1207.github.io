@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twala Inc</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Twala</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact Me</a></li>
+            </ul>
+            <button type="button">Subscribe</button>
+        </nav>
+
+    </div>
+
+    <div class="bodzy"></div>
+    <div class="content">
+        <h1>Njabulo</h1>
+        <p>Indoda emadodeni</p>
+    </div>
+    <section class="about">
+        <div class="main">
+            <img src="IMG-20211215-WA0022.jpg" alt="">
+            <div class="text">
+                <h1>About Me</h1>
+                <h5>Web Developer</h5>
+                <p>A final year student in software development, I am fascinated by technology and its ever-increasing importance in society. I can simply adjust to any working environment, and I am eager to learn and adapt to every challenge that presents itself. I want to be part of an organization where I can make a difference in people's lives by offering my insights on issues that concern them and helping to improve their lives. My career objective is to always produce high-quality work and ensure that every project I perform is done properly. Because that is what counts most, I am incredibly committed and concentrated in any activity I undertake.
+
+                    I am passionate about building software and I have a strong ambition to translate business requirements into technical solutions. I have good knowledge in networking(SSH configuration), operating systems, HTML, CSS, javascript, IoT, SQL server, Nodejs, MongoDB and C#. I'm currently looking for opportunities within the software development space.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="skill">
+        <h1>My Skills</h1>
+
+        <li><h1>HTMl</h1></li>
+            <span class="bar"><span class="html"></span></span>
+        <li><h1>CSS</h1></li>
+            <span class="bar"><span class="css"></span></span>
+        <li><h1>Javascript</h1></li>
+            <span class="bar"><span class="javascript"></span></span>
+        <li><h1>C#</h1></li>
+            <span class="bar"><span class="c"></span></span>
+    </div>
+    <div class="container">
+        <h1 class="heading">My Projects</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="bank.png" alt="">
+            <h3>Ecommerce website</h3>
+            <p>A website that I created using html, css and javascript</p>
+            <a href="#" class="btn">View</a>
+        </div>
+
+        <div class="box">
+            <img src="pos.jpeg" alt="">
+            <h3>Point Of Sale</h3>
+            <p>A system I created using C# Windows forms</p>
+            <a href="#" class="btn">View</a>
+        </div>
+
+        <div class="box">
+            <img src="menu.png" alt="">
+            <h3>Restaurant website</h3>
+            <p>A website that I created using html, css and javascript</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+    </div>
+    
+    <div class="container2">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>CONTACT ME</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your email address" required>
+            <input type="text" id="phone" placeholder="Your phone number" required>
+            <textarea id="message" rows="4" placeholder="How can I assist you?"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "njabulo.ngamla.1207@gmail.com",
+                        Password : "349F0A9B858ACBC1E0B2741F5069E6710583",
+                        To : 'njabulo.ngamla.1207@gmail.com',
+                        From : document.getElementById("email").value,
+                        Subject : "New Contact Form Enquiry",
+                        Body : "Name: " + document.getElementById("name").value
+                            + "<br> Email: " + document.getElementById("email").value
+                            + "<br> Phone nr: " + document.getElementById("phone").value
+                            + "<br> Message: " + document.getElementById("message").value
+                    }).then(
+                    message => alert(message)
+                    );
+        }
+    </script>
+    <footer>
+        
+        <ul class="social-icon">
+            <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">My Skills</a></li>
+            <li><a href="#">My Projects</a></li>
+            <li><a href="#">Contact Me</a></li>
+        </ul>
+        <p>@2023 All Rights Reserved</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
