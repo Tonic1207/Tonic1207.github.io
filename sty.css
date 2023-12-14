@@ -396,3 +396,16 @@ footer p{
     font-size: 1.1em;
 }
 
+.scrollTop{
+    position: fixed;
+    botttom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    border-radius: 1px solid #fff;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
